@@ -1,0 +1,23 @@
+* { margin: 0; padding: 0; }
+
+body { margin: 10px; }
+
+/* application.scss */
+.ideas { clear: both; overflow: auto; }
+
+.idea { min-height: 50px; min-width: 100px; margin: 2px; padding: 2px; float: left; }
+.idea .edit-links { float: right; list-style-type: none; }
+.idea .edit-links li { display: inline; padding-left: 2px; }
+
+/* colors */
+.green { background: #82DE7A; border: 1px solid #508F4A; }
+
+.yellow { background: #FCFF96; border: 1px solid #8D8F4A; }
+
+.blue { background: #8EE3FA; border: 1px solid #417280; }
+
+.red { background: #F09E9E; border: 1px solid #5E3535; }
+
+.purple { background: #FCB3FB; border: 1px solid #783177; }
+
+/* sizes */

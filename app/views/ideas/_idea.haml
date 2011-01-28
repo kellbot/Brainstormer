@@ -1,0 +1,8 @@
+%div{:class => "idea #{h idea.color}", "data-id" => idea.id}
+  %h3= h idea.content
+  %ul.edit-links
+    %li= link_to 'Show', idea
+    %li= link_to 'Edit', edit_idea_path(idea)
+    %li= link_to 'Destroy', idea, :confirm => 'Are you sure?', :method => :delete
+  - idea.children.each do |child|
+    = render :partial => 'idea', :locals => {:idea => child}

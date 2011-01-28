@@ -1,0 +1,18 @@
+<p>
+  <b>Size:</b>
+  <%=h @idea.size %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @idea.content %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%=h @idea.color %>
+</p>
+
+
+<%= link_to 'Edit', edit_idea_path(@idea) %> |
+<%= link_to 'Back', ideas_path %>

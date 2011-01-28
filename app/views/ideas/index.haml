@@ -1,0 +1,35 @@
+:javascript
+  function clear_position(elem) {
+    $(elem).css('left','');
+    $(elem).css('top','');
+  }
+  
+  function save_parent(parent_id, child_id) {
+    $.post('/ideas/update_parent/'+child_id+'/'+parent_id);
+  }
+  
+  $(function() {
+  	$( ".idea" ).draggable({ revert: "invalid" });
+  	$(".idea, .ideas").droppable({
+      hoverClass: "ui-state-active",
+      greedy: true,
+      drop: function(event, ui) {
+        $(this).append($(ui.draggable));
+        clear_position(ui.draggable);
+        save_parent($(this).attr('data-id'),$(ui.draggable).attr('data-id'));
+      }
+    });
+  	$('.edit-links').hide();
+  	$(".idea").hover(function() {
+  	  $(this).children('.edit-links').show();
+  	},
+  	  function() {
+  	    $(this).children('.edit-links').hide();
+  	  }
+  	);
+  });
+%h1 Listing ideas
+= link_to 'New idea', new_idea_path
+.ideas
+  - @ideas.each do |idea|
+    = render :partial => 'idea', :locals => { :idea => idea}
