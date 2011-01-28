@@ -42,5 +42,4 @@ Rails::Initializer.run do |config|
 
 end
 
-Sass::Plugin.options[:always_update] = true
 Sass::Plugin.options[:style] = :compact
