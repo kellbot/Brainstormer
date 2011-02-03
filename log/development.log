@@ -5332,3 +5332,979 @@ DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called
 Rendered ideas/_new.haml (7.0ms)
 Rendered ideas/index.haml within layouts/ideas (209.8ms)
 Completed 200 OK in 237ms (Views: 208.3ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Feb 03 15:23:46 -0500 2011
+  Processing by IdeasController#index as HTML
+  [1m[36mContainer Load (1.2ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (`ideas`.`name` = 'Trash') LIMIT 1[0m
+  [1m[35mContainer Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (name like 'Slot%')
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 4)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 2)
+Rendered ideas/_idea.haml (10.3ms)
+Rendered ideas/_idea.haml (22.4ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 5)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 11)
+Rendered ideas/_idea.haml (5.5ms)
+Rendered ideas/_idea.haml (88.7ms)
+  [1m[36mIdea Load (0.7ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 6)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 10)
+Rendered ideas/_idea.haml (6.2ms)
+Rendered ideas/_idea.haml (14.5ms)
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 7)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 12)
+Rendered ideas/_idea.haml (5.5ms)
+Rendered ideas/_idea.haml (14.6ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 8)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 1)
+Rendered ideas/_idea.haml (5.7ms)
+Rendered ideas/_idea.haml (12.3ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 9)[0m
+Rendered ideas/_idea.haml (5.3ms)
+  [1m[35mIdea Load (0.2ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (type IS NULL) AND (parent_id IS NULL)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 13)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 15)
+Rendered ideas/_idea.haml (5.8ms)
+Rendered ideas/_idea.haml (13.1ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 14)[0m
+Rendered ideas/_idea.haml (5.3ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 16)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 17)[0m
+Rendered ideas/_idea.haml (5.0ms)
+Rendered ideas/_idea.haml (11.9ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2175495600_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (6.8ms)
+Rendered ideas/index.haml within layouts/ideas (217.7ms)
+Completed 200 OK in 246ms (Views: 215.6ms | ActiveRecord: 8.4ms)
+
+
+Started POST "/ideas/update_parent/17/undefined" for 127.0.0.1 at Thu Feb 03 15:23:53 -0500 2011
+  Processing by IdeasController#update_parent as */*
+  Parameters: {"id"=>"17", "parent_id"=>"undefined"}
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`id` = 17) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE `ideas` SET `parent_id` = NULL, `updated_at` = '2011-02-03 20:23:53' WHERE (`ideas`.`id` = 17)
+  [1m[36mSQL (1.8ms)[0m  [1mCOMMIT[0m
+Rendered text template (0.0ms)
+Completed 200 OK in 18ms (Views: 1.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Feb 03 15:23:57 -0500 2011
+  Processing by IdeasController#index as HTML
+  [1m[35mContainer Load (1.0ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (`ideas`.`name` = 'Trash') LIMIT 1
+  [1m[36mContainer Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (name like 'Slot%')[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 4)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 2)[0m
+Rendered ideas/_idea.haml (9.5ms)
+Rendered ideas/_idea.haml (20.2ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 5)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 11)[0m
+Rendered ideas/_idea.haml (5.2ms)
+Rendered ideas/_idea.haml (12.1ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 6)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 10)[0m
+Rendered ideas/_idea.haml (5.1ms)
+Rendered ideas/_idea.haml (12.0ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 7)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 12)[0m
+Rendered ideas/_idea.haml (5.1ms)
+Rendered ideas/_idea.haml (11.9ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 8)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 1)[0m
+Rendered ideas/_idea.haml (5.3ms)
+Rendered ideas/_idea.haml (13.7ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 9)
+Rendered ideas/_idea.haml (5.1ms)
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (type IS NULL) AND (parent_id IS NULL)[0m
+  [1m[35mIdea Load (0.7ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 13)
+  [1m[36mIdea Load (1.1ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 15)[0m
+Rendered ideas/_idea.haml (79.7ms)
+Rendered ideas/_idea.haml (86.7ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 14)
+Rendered ideas/_idea.haml (5.2ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 16)[0m
+Rendered ideas/_idea.haml (5.3ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 17)
+Rendered ideas/_idea.haml (5.0ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2177455900_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (7.2ms)
+Rendered ideas/index.haml within layouts/ideas (209.9ms)
+Completed 200 OK in 242ms (Views: 208.7ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Feb 03 15:24:30 -0500 2011
+  Processing by IdeasController#index as HTML
+  [1m[36mContainer Load (2.0ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (`ideas`.`name` = 'Trash') LIMIT 1[0m
+  [1m[35mContainer Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (name like 'Slot%')
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 4)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 2)
+Rendered ideas/_idea.haml (9.6ms)
+Rendered ideas/_idea.haml (22.7ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 5)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 11)
+Rendered ideas/_idea.haml (5.2ms)
+Rendered ideas/_idea.haml (12.1ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 6)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 10)
+Rendered ideas/_idea.haml (5.5ms)
+Rendered ideas/_idea.haml (86.1ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 7)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 12)
+Rendered ideas/_idea.haml (5.2ms)
+Rendered ideas/_idea.haml (12.1ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 8)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 1)
+Rendered ideas/_idea.haml (5.3ms)
+Rendered ideas/_idea.haml (11.8ms)
+  [1m[36mIdea Load (0.6ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 9)[0m
+Rendered ideas/_idea.haml (5.6ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (type IS NULL) AND (parent_id IS NULL)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 13)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 15)
+Rendered ideas/_idea.haml (5.2ms)
+Rendered ideas/_idea.haml (12.2ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 14)[0m
+Rendered ideas/_idea.haml (5.6ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 16)
+Rendered ideas/_idea.haml (5.4ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 17)[0m
+Rendered ideas/_idea.haml (5.9ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2175887000_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (7.3ms)
+Rendered ideas/index.haml within layouts/ideas (212.1ms)
+Completed 200 OK in 233ms (Views: 210.1ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Feb 03 15:25:03 -0500 2011
+  Processing by IdeasController#index as HTML
+  [1m[35mContainer Load (1.7ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (`ideas`.`name` = 'Trash') LIMIT 1
+  [1m[36mContainer Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (name like 'Slot%')[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 4)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 2)[0m
+Rendered ideas/_idea.haml (9.4ms)
+Rendered ideas/_idea.haml (21.6ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 5)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 11)[0m
+Rendered ideas/_idea.haml (5.2ms)
+Rendered ideas/_idea.haml (12.2ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 6)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 10)[0m
+Rendered ideas/_idea.haml (5.3ms)
+Rendered ideas/_idea.haml (12.4ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 7)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 12)[0m
+Rendered ideas/_idea.haml (5.2ms)
+Rendered ideas/_idea.haml (12.2ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 8)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 1)[0m
+Rendered ideas/_idea.haml (5.1ms)
+Rendered ideas/_idea.haml (11.8ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 9)
+Rendered ideas/_idea.haml (4.9ms)
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (type IS NULL) AND (parent_id IS NULL)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 13)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 15)[0m
+Rendered ideas/_idea.haml (5.3ms)
+Rendered ideas/_idea.haml (13.2ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 14)
+Rendered ideas/_idea.haml (5.4ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 16)[0m
+Rendered ideas/_idea.haml (5.1ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 17)
+Rendered ideas/_idea.haml (5.1ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2174619680_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (6.6ms)
+Rendered ideas/index.haml within layouts/ideas (137.0ms)
+Completed 200 OK in 308ms (Views: 207.3ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Feb 03 15:25:26 -0500 2011
+  Processing by IdeasController#index as HTML
+  [1m[36mContainer Load (2.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (`ideas`.`name` = 'Trash') LIMIT 1[0m
+  [1m[35mContainer Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (name like 'Slot%')
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 4)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 2)
+Rendered ideas/_idea.haml (9.2ms)
+Rendered ideas/_idea.haml (19.8ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 5)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 11)
+Rendered ideas/_idea.haml (5.1ms)
+Rendered ideas/_idea.haml (12.0ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 6)[0m
+  [1m[35mIdea Load (2.5ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 10)
+Rendered ideas/_idea.haml (7.8ms)
+Rendered ideas/_idea.haml (14.4ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 7)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 12)
+Rendered ideas/_idea.haml (5.4ms)
+Rendered ideas/_idea.haml (12.3ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 8)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 1)
+Rendered ideas/_idea.haml (74.0ms)
+Rendered ideas/_idea.haml (80.8ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 9)[0m
+Rendered ideas/_idea.haml (7.2ms)
+  [1m[35mIdea Load (0.2ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (type IS NULL) AND (parent_id IS NULL)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 13)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 15)
+Rendered ideas/_idea.haml (5.7ms)
+Rendered ideas/_idea.haml (13.0ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 14)[0m
+Rendered ideas/_idea.haml (5.0ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 16)
+Rendered ideas/_idea.haml (5.3ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 17)[0m
+Rendered ideas/_idea.haml (5.0ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2177080900_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (7.1ms)
+Rendered ideas/index.haml within layouts/ideas (206.7ms)
+Completed 200 OK in 229ms (Views: 202.9ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Feb 03 15:25:57 -0500 2011
+  Processing by IdeasController#index as HTML
+  [1m[35mContainer Load (12.6ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (`ideas`.`name` = 'Trash') LIMIT 1
+  [1m[36mContainer Load (0.5ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (name like 'Slot%')[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 4)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 2)[0m
+Rendered ideas/_idea.haml (10.0ms)
+Rendered ideas/_idea.haml (20.9ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 5)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 11)[0m
+Rendered ideas/_idea.haml (5.6ms)
+Rendered ideas/_idea.haml (83.0ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 6)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 10)[0m
+Rendered ideas/_idea.haml (5.5ms)
+Rendered ideas/_idea.haml (12.4ms)
+  [1m[35mIdea Load (0.6ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 7)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 12)[0m
+Rendered ideas/_idea.haml (5.5ms)
+Rendered ideas/_idea.haml (13.7ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 8)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 1)[0m
+Rendered ideas/_idea.haml (5.2ms)
+Rendered ideas/_idea.haml (11.8ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 9)
+Rendered ideas/_idea.haml (6.2ms)
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (type IS NULL) AND (parent_id IS NULL)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 13)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 15)[0m
+Rendered ideas/_idea.haml (5.6ms)
+Rendered ideas/_idea.haml (12.3ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 14)
+Rendered ideas/_idea.haml (5.1ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 16)[0m
+Rendered ideas/_idea.haml (5.2ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 17)
+Rendered ideas/_idea.haml (5.1ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2175393420_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (7.2ms)
+Rendered ideas/index.haml within layouts/ideas (208.5ms)
+Completed 200 OK in 243ms (Views: 206.8ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/ideas/update/17" for 127.0.0.1 at Thu Feb 03 15:26:00 -0500 2011
+
+ActionController::RoutingError (No route matches "/ideas/update/17"):
+  actionpack (3.0.3) lib/action_dispatch/middleware/show_exceptions.rb:53:in `call'
+  railties (3.0.3) lib/rails/rack/logger.rb:13:in `call'
+  rack (1.2.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.0.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `synchronize'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  actionpack (3.0.3) lib/action_dispatch/middleware/static.rb:30:in `call'
+  railties (3.0.3) lib/rails/application.rb:168:in `call'
+  railties (3.0.3) lib/rails/application.rb:77:in `send'
+  railties (3.0.3) lib/rails/application.rb:77:in `method_missing'
+  railties (3.0.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.2.1) lib/rack/content_length.rb:13:in `call'
+  rack (1.2.1) lib/rack/handler/webrick.rb:52:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.2.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.2.1) lib/rack/server.rb:213:in `start'
+  railties (3.0.3) lib/rails/commands/server.rb:65:in `start'
+  railties (3.0.3) lib/rails/commands.rb:30
+  railties (3.0.3) lib/rails/commands.rb:27:in `tap'
+  railties (3.0.3) lib/rails/commands.rb:27
+  script/rails:6:in `require'
+  script/rails:6
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Feb 03 15:26:34 -0500 2011
+  Processing by IdeasController#index as HTML
+  [1m[36mContainer Load (1.0ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (`ideas`.`name` = 'Trash') LIMIT 1[0m
+  [1m[35mContainer Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (name like 'Slot%')
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 4)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 2)
+Rendered ideas/_idea.haml (9.8ms)
+Rendered ideas/_idea.haml (21.8ms)
+  [1m[36mIdea Load (2.1ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 5)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 11)
+Rendered ideas/_idea.haml (5.7ms)
+Rendered ideas/_idea.haml (14.6ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 6)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 10)
+Rendered ideas/_idea.haml (5.9ms)
+Rendered ideas/_idea.haml (12.6ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 7)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 12)
+Rendered ideas/_idea.haml (5.2ms)
+Rendered ideas/_idea.haml (12.2ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 8)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 1)
+Rendered ideas/_idea.haml (5.2ms)
+Rendered ideas/_idea.haml (12.2ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 9)[0m
+Rendered ideas/_idea.haml (5.2ms)
+  [1m[35mIdea Load (0.2ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (type IS NULL) AND (parent_id IS NULL)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 13)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 15)
+Rendered ideas/_idea.haml (5.3ms)
+Rendered ideas/_idea.haml (11.8ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 14)[0m
+Rendered ideas/_idea.haml (5.6ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 16)
+Rendered ideas/_idea.haml (79.5ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 17)[0m
+Rendered ideas/_idea.haml (5.3ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2178376220_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (6.9ms)
+Rendered ideas/index.haml within layouts/ideas (212.3ms)
+Completed 200 OK in 235ms (Views: 209.3ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/ideas/edit/15" for 127.0.0.1 at Thu Feb 03 15:26:37 -0500 2011
+
+ActionController::RoutingError (No route matches "/ideas/edit/15"):
+  actionpack (3.0.3) lib/action_dispatch/middleware/show_exceptions.rb:53:in `call'
+  railties (3.0.3) lib/rails/rack/logger.rb:13:in `call'
+  rack (1.2.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.0.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `synchronize'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  actionpack (3.0.3) lib/action_dispatch/middleware/static.rb:30:in `call'
+  railties (3.0.3) lib/rails/application.rb:168:in `call'
+  railties (3.0.3) lib/rails/application.rb:77:in `send'
+  railties (3.0.3) lib/rails/application.rb:77:in `method_missing'
+  railties (3.0.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.2.1) lib/rack/content_length.rb:13:in `call'
+  rack (1.2.1) lib/rack/handler/webrick.rb:52:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.2.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.2.1) lib/rack/server.rb:213:in `start'
+  railties (3.0.3) lib/rails/commands/server.rb:65:in `start'
+  railties (3.0.3) lib/rails/commands.rb:30
+  railties (3.0.3) lib/rails/commands.rb:27:in `tap'
+  railties (3.0.3) lib/rails/commands.rb:27
+  script/rails:6:in `require'
+  script/rails:6
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/ideas/edit/13" for 127.0.0.1 at Thu Feb 03 15:26:37 -0500 2011
+
+ActionController::RoutingError (No route matches "/ideas/edit/13"):
+  actionpack (3.0.3) lib/action_dispatch/middleware/show_exceptions.rb:53:in `call'
+  railties (3.0.3) lib/rails/rack/logger.rb:13:in `call'
+  rack (1.2.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.0.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `synchronize'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  actionpack (3.0.3) lib/action_dispatch/middleware/static.rb:30:in `call'
+  railties (3.0.3) lib/rails/application.rb:168:in `call'
+  railties (3.0.3) lib/rails/application.rb:77:in `send'
+  railties (3.0.3) lib/rails/application.rb:77:in `method_missing'
+  railties (3.0.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.2.1) lib/rack/content_length.rb:13:in `call'
+  rack (1.2.1) lib/rack/handler/webrick.rb:52:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.2.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.2.1) lib/rack/server.rb:213:in `start'
+  railties (3.0.3) lib/rails/commands/server.rb:65:in `start'
+  railties (3.0.3) lib/rails/commands.rb:30
+  railties (3.0.3) lib/rails/commands.rb:27:in `tap'
+  railties (3.0.3) lib/rails/commands.rb:27
+  script/rails:6:in `require'
+  script/rails:6
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Feb 03 15:26:59 -0500 2011
+  Processing by IdeasController#index as HTML
+  [1m[35mContainer Load (0.6ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (`ideas`.`name` = 'Trash') LIMIT 1
+  [1m[36mContainer Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (name like 'Slot%')[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 4)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 2)[0m
+Rendered ideas/_idea.haml (9.5ms)
+Rendered ideas/_idea.haml (22.8ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 5)
+  [1m[36mIdea Load (0.8ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 11)[0m
+Rendered ideas/_idea.haml (5.7ms)
+Rendered ideas/_idea.haml (12.5ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 6)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 10)[0m
+Rendered ideas/_idea.haml (5.5ms)
+Rendered ideas/_idea.haml (83.1ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 7)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 12)[0m
+Rendered ideas/_idea.haml (5.6ms)
+Rendered ideas/_idea.haml (12.3ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 8)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 1)[0m
+Rendered ideas/_idea.haml (5.3ms)
+Rendered ideas/_idea.haml (12.4ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 9)
+Rendered ideas/_idea.haml (5.0ms)
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (type IS NULL) AND (parent_id IS NULL)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 13)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 15)[0m
+Rendered ideas/_idea.haml (5.4ms)
+Rendered ideas/_idea.haml (12.5ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 14)
+Rendered ideas/_idea.haml (5.3ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 16)[0m
+Rendered ideas/_idea.haml (5.4ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 17)
+Rendered ideas/_idea.haml (5.2ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2176005420_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (9.0ms)
+Rendered ideas/index.haml within layouts/ideas (213.3ms)
+Completed 200 OK in 235ms (Views: 211.7ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/ideas/edit/14" for 127.0.0.1 at Thu Feb 03 15:27:01 -0500 2011
+
+ActionController::RoutingError (No route matches "/ideas/edit/14"):
+  actionpack (3.0.3) lib/action_dispatch/middleware/show_exceptions.rb:53:in `call'
+  railties (3.0.3) lib/rails/rack/logger.rb:13:in `call'
+  rack (1.2.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.0.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `synchronize'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  actionpack (3.0.3) lib/action_dispatch/middleware/static.rb:30:in `call'
+  railties (3.0.3) lib/rails/application.rb:168:in `call'
+  railties (3.0.3) lib/rails/application.rb:77:in `send'
+  railties (3.0.3) lib/rails/application.rb:77:in `method_missing'
+  railties (3.0.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.2.1) lib/rack/content_length.rb:13:in `call'
+  rack (1.2.1) lib/rack/handler/webrick.rb:52:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.2.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.2.1) lib/rack/server.rb:213:in `start'
+  railties (3.0.3) lib/rails/commands/server.rb:65:in `start'
+  railties (3.0.3) lib/rails/commands.rb:30
+  railties (3.0.3) lib/rails/commands.rb:27:in `tap'
+  railties (3.0.3) lib/rails/commands.rb:27
+  script/rails:6:in `require'
+  script/rails:6
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Feb 03 15:27:20 -0500 2011
+  Processing by IdeasController#index as HTML
+  [1m[36mContainer Load (1.9ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (`ideas`.`name` = 'Trash') LIMIT 1[0m
+  [1m[35mContainer Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (name like 'Slot%')
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 4)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 2)
+Rendered ideas/_idea.haml (9.1ms)
+Rendered ideas/_idea.haml (19.8ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 5)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 11)
+Rendered ideas/_idea.haml (5.5ms)
+Rendered ideas/_idea.haml (12.1ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 6)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 10)
+Rendered ideas/_idea.haml (5.5ms)
+Rendered ideas/_idea.haml (12.6ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 7)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 12)
+Rendered ideas/_idea.haml (5.9ms)
+Rendered ideas/_idea.haml (12.9ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 8)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 1)
+Rendered ideas/_idea.haml (5.4ms)
+Rendered ideas/_idea.haml (12.0ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 9)[0m
+Rendered ideas/_idea.haml (5.0ms)
+  [1m[35mIdea Load (0.2ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (type IS NULL) AND (parent_id IS NULL)
+  [1m[36mIdea Load (0.5ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 13)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 15)
+Rendered ideas/_idea.haml (5.6ms)
+Rendered ideas/_idea.haml (15.2ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 14)[0m
+Rendered ideas/_idea.haml (5.3ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 16)
+Rendered ideas/_idea.haml (5.1ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 17)[0m
+Rendered ideas/_idea.haml (5.6ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2174581240_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (6.6ms)
+Rendered ideas/index.haml within layouts/ideas (213.8ms)
+Completed 200 OK in 317ms (Views: 212.1ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Feb 03 15:27:36 -0500 2011
+  Processing by IdeasController#index as HTML
+  [1m[35mContainer Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (`ideas`.`name` = 'Trash') LIMIT 1
+  [1m[36mContainer Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (name like 'Slot%')[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 4)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 2)[0m
+Rendered ideas/_idea.haml (9.1ms)
+Rendered ideas/_idea.haml (21.3ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 5)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 11)[0m
+Rendered ideas/_idea.haml (5.2ms)
+Rendered ideas/_idea.haml (12.3ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 6)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 10)[0m
+Rendered ideas/_idea.haml (5.1ms)
+Rendered ideas/_idea.haml (11.7ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 7)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 12)[0m
+Rendered ideas/_idea.haml (5.2ms)
+Rendered ideas/_idea.haml (11.7ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 8)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 1)[0m
+Rendered ideas/_idea.haml (77.9ms)
+Rendered ideas/_idea.haml (84.6ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 9)
+Rendered ideas/_idea.haml (5.6ms)
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (type IS NULL) AND (parent_id IS NULL)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 13)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 15)[0m
+Rendered ideas/_idea.haml (5.2ms)
+Rendered ideas/_idea.haml (12.3ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 14)
+Rendered ideas/_idea.haml (5.5ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 16)[0m
+Rendered ideas/_idea.haml (5.0ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 17)
+Rendered ideas/_idea.haml (5.2ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2177071320_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (6.8ms)
+Rendered ideas/index.haml within layouts/ideas (206.5ms)
+Completed 200 OK in 313ms (Views: 205.1ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/ideas/14/edit" for 127.0.0.1 at Thu Feb 03 15:27:39 -0500 2011
+  Processing by IdeasController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`id` = 14) LIMIT 1[0m
+DEPRECATION WARNING: f.error_messages was removed from Rails and is now available as a plugin. Please install it with `rails plugin install git://github.com/rails/dynamic_form.git`. (called from _app_views_ideas_edit_html_erb___409381577_2175417620_0 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/edit.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_ideas_edit_html_erb___409381577_2175417620_0 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/edit.html.erb:3)
+Rendered ideas/edit.html.erb within layouts/ideas (11.2ms)
+Completed 200 OK in 45ms (Views: 38.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ideas/14/edit" for 127.0.0.1 at Thu Feb 03 15:28:18 -0500 2011
+  Processing by IdeasController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mIdea Load (0.2ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`id` = 14) LIMIT 1
+DEPRECATION WARNING: f.error_messages was removed from Rails and is now available as a plugin. Please install it with `rails plugin install git://github.com/rails/dynamic_form.git`. (called from _app_views_ideas_edit_html_erb___409381577_2177704860_0 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/edit.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_ideas_edit_html_erb___409381577_2177704860_0 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/edit.html.erb:3)
+Rendered ideas/edit.html.erb within layouts/ideas (12.2ms)
+Completed 200 OK in 24ms (Views: 17.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/14/edit" for 127.0.0.1 at Thu Feb 03 15:28:20 -0500 2011
+  Processing by IdeasController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`id` = 14) LIMIT 1[0m
+DEPRECATION WARNING: f.error_messages was removed from Rails and is now available as a plugin. Please install it with `rails plugin install git://github.com/rails/dynamic_form.git`. (called from _app_views_ideas_edit_html_erb___409381577_2176071020_0 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/edit.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_ideas_edit_html_erb___409381577_2176071020_0 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/edit.html.erb:3)
+Rendered ideas/edit.html.erb within layouts/ideas (11.4ms)
+Completed 200 OK in 24ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ideas/14/edit" for 127.0.0.1 at Thu Feb 03 15:28:24 -0500 2011
+  Processing by IdeasController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`id` = 14) LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2177828920_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (14.2ms)
+Rendered ideas/edit.html.erb within layouts/ideas (18.5ms)
+Completed 200 OK in 87ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ideas/14/edit" for 127.0.0.1 at Thu Feb 03 15:29:06 -0500 2011
+  Processing by IdeasController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`id` = 14) LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2176039980_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (13.5ms)
+Rendered ideas/edit.html.erb within layouts/ideas (17.7ms)
+Completed 200 OK in 30ms (Views: 22.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Feb 03 15:29:10 -0500 2011
+  Processing by IdeasController#index as HTML
+  [1m[35mContainer Load (0.5ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (`ideas`.`name` = 'Trash') LIMIT 1
+  [1m[36mContainer Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (name like 'Slot%')[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 4)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 2)[0m
+Rendered ideas/_idea.haml (9.3ms)
+Rendered ideas/_idea.haml (20.2ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 5)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 11)[0m
+Rendered ideas/_idea.haml (5.6ms)
+Rendered ideas/_idea.haml (12.4ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 6)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 10)[0m
+Rendered ideas/_idea.haml (5.1ms)
+Rendered ideas/_idea.haml (12.0ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 7)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 12)[0m
+Rendered ideas/_idea.haml (5.2ms)
+Rendered ideas/_idea.haml (11.9ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 8)
+  [1m[36mIdea Load (0.5ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 1)[0m
+Rendered ideas/_idea.haml (6.7ms)
+Rendered ideas/_idea.haml (13.8ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 9)
+Rendered ideas/_idea.haml (5.0ms)
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (type IS NULL) AND (parent_id IS NULL)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 13)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 15)[0m
+Rendered ideas/_idea.haml (5.2ms)
+Rendered ideas/_idea.haml (12.1ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 14)
+Rendered ideas/_idea.haml (5.0ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 16)[0m
+Rendered ideas/_idea.haml (5.0ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 17)
+Rendered ideas/_idea.haml (81.2ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2178410140_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (7.3ms)
+Rendered ideas/index.haml within layouts/ideas (210.6ms)
+Completed 200 OK in 241ms (Views: 209.1ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Feb 03 15:29:25 -0500 2011
+  Processing by IdeasController#index as HTML
+  [1m[36mContainer Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (`ideas`.`name` = 'Trash') LIMIT 1[0m
+  [1m[35mContainer Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (name like 'Slot%')
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 4)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 2)
+Rendered ideas/_idea.haml (9.4ms)
+Rendered ideas/_idea.haml (19.9ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 5)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 11)
+Rendered ideas/_idea.haml (5.6ms)
+Rendered ideas/_idea.haml (12.4ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 6)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 10)
+Rendered ideas/_idea.haml (5.5ms)
+Rendered ideas/_idea.haml (12.2ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 7)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 12)
+Rendered ideas/_idea.haml (78.5ms)
+Rendered ideas/_idea.haml (85.2ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 8)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 1)
+Rendered ideas/_idea.haml (5.6ms)
+Rendered ideas/_idea.haml (12.5ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 9)[0m
+Rendered ideas/_idea.haml (5.5ms)
+  [1m[35mIdea Load (0.2ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (type IS NULL) AND (parent_id IS NULL)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 13)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 15)
+Rendered ideas/_idea.haml (5.5ms)
+Rendered ideas/_idea.haml (12.4ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 14)[0m
+Rendered ideas/_idea.haml (5.2ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 16)
+Rendered ideas/_idea.haml (5.6ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 17)[0m
+Rendered ideas/_idea.haml (7.5ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2176678580_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (7.1ms)
+Rendered ideas/index.haml within layouts/ideas (211.5ms)
+Completed 200 OK in 237ms (Views: 210.0ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/ideas/14/edit" for 127.0.0.1 at Thu Feb 03 15:29:27 -0500 2011
+  Processing by IdeasController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`id` = 14) LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2175204480_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (12.6ms)
+Rendered ideas/edit.html.erb within layouts/ideas (17.8ms)
+Completed 200 OK in 37ms (Views: 23.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/ideas/14" for 127.0.0.1 at Thu Feb 03 15:29:40 -0500 2011
+  Processing by IdeasController#update as HTML
+  Parameters: {"commit"=>"Create", "idea"=>{"name"=>"Service Provider Analytics", "color"=>"green", "content"=>""}, "authenticity_token"=>"iIRhFDSZhSbnk3YZkbxAJ70bSZgQPffnm4ubo9sRdj8=", "utf8"=>"✓", "id"=>"14"}
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`id` = 14) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `ideas` SET `color` = 'green', `updated_at` = '2011-02-03 20:29:40' WHERE (`ideas`.`id` = 14)[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/ideas/14
+Completed 302 Found in 20ms
+
+
+Started GET "/ideas/14" for 127.0.0.1 at Thu Feb 03 15:29:40 -0500 2011
+  Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`id` = 14) LIMIT 1[0m
+Rendered ideas/show.html.erb within layouts/ideas (8.4ms)
+Completed 200 OK in 52ms (Views: 44.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Feb 03 15:29:45 -0500 2011
+  Processing by IdeasController#index as HTML
+  [1m[35mContainer Load (6.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (`ideas`.`name` = 'Trash') LIMIT 1
+  [1m[36mContainer Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (name like 'Slot%')[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 4)
+  [1m[36mIdea Load (0.7ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 2)[0m
+Rendered ideas/_idea.haml (10.0ms)
+Rendered ideas/_idea.haml (22.6ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 5)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 11)[0m
+Rendered ideas/_idea.haml (5.3ms)
+Rendered ideas/_idea.haml (12.3ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 6)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 10)[0m
+Rendered ideas/_idea.haml (5.3ms)
+Rendered ideas/_idea.haml (12.2ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 7)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 12)[0m
+Rendered ideas/_idea.haml (5.6ms)
+Rendered ideas/_idea.haml (12.4ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 8)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 1)[0m
+Rendered ideas/_idea.haml (5.3ms)
+Rendered ideas/_idea.haml (12.2ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 9)
+Rendered ideas/_idea.haml (5.8ms)
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (type IS NULL) AND (parent_id IS NULL)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 13)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 15)[0m
+Rendered ideas/_idea.haml (5.4ms)
+Rendered ideas/_idea.haml (12.0ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 14)
+Rendered ideas/_idea.haml (5.1ms)
+  [1m[36mIdea Load (0.5ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 16)[0m
+Rendered ideas/_idea.haml (5.9ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 17)
+Rendered ideas/_idea.haml (5.6ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2174872480_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (7.2ms)
+Rendered ideas/index.haml within layouts/ideas (138.9ms)
+Completed 200 OK in 233ms (Views: 137.0ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/ideas/14/edit" for 127.0.0.1 at Thu Feb 03 15:30:12 -0500 2011
+  Processing by IdeasController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`id` = 14) LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2177572380_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (15.9ms)
+Rendered ideas/edit.html.erb within layouts/ideas (20.0ms)
+Completed 200 OK in 39ms (Views: 24.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/ideas/14" for 127.0.0.1 at Thu Feb 03 15:30:19 -0500 2011
+  Processing by IdeasController#update as HTML
+  Parameters: {"commit"=>"Create", "idea"=>{"name"=>"Service Provider Analytics", "color"=>"blue", "content"=>""}, "authenticity_token"=>"iIRhFDSZhSbnk3YZkbxAJ70bSZgQPffnm4ubo9sRdj8=", "utf8"=>"✓", "id"=>"14"}
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`id` = 14) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (2.2ms)[0m  UPDATE `ideas` SET `updated_at` = '2011-02-03 20:30:19', `color` = 'blue' WHERE (`ideas`.`id` = 14)
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/ideas
+Completed 302 Found in 19ms
+
+
+Started GET "/ideas" for 127.0.0.1 at Thu Feb 03 15:30:19 -0500 2011
+  Processing by IdeasController#index as HTML
+  [1m[35mContainer Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (`ideas`.`name` = 'Trash') LIMIT 1
+  [1m[36mContainer Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (name like 'Slot%')[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 4)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 2)[0m
+Rendered ideas/_idea.haml (10.5ms)
+Rendered ideas/_idea.haml (22.8ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 5)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 11)[0m
+Rendered ideas/_idea.haml (5.7ms)
+Rendered ideas/_idea.haml (12.3ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 6)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 10)[0m
+Rendered ideas/_idea.haml (5.6ms)
+Rendered ideas/_idea.haml (12.5ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 7)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 12)[0m
+Rendered ideas/_idea.haml (5.2ms)
+Rendered ideas/_idea.haml (11.8ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 8)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 1)[0m
+Rendered ideas/_idea.haml (5.2ms)
+Rendered ideas/_idea.haml (12.2ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 9)
+Rendered ideas/_idea.haml (5.5ms)
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (type IS NULL) AND (parent_id IS NULL)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 13)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 15)[0m
+Rendered ideas/_idea.haml (5.1ms)
+Rendered ideas/_idea.haml (12.0ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 14)
+Rendered ideas/_idea.haml (5.3ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 16)[0m
+Rendered ideas/_idea.haml (5.1ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 17)
+Rendered ideas/_idea.haml (6.3ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2174715340_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (7.0ms)
+Rendered ideas/index.haml within layouts/ideas (139.5ms)
+Completed 200 OK in 226ms (Views: 137.7ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at Thu Feb 03 15:31:21 -0500 2011
+  Processing by IdeasController#index as HTML
+  [1m[36mContainer Load (2.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (`ideas`.`name` = 'Trash') LIMIT 1[0m
+  [1m[35mContainer Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (name like 'Slot%')
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 4)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 2)
+Rendered ideas/_idea.haml (12.2ms)
+Rendered ideas/_idea.haml (23.2ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 5)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 11)
+Rendered ideas/_idea.haml (5.9ms)
+Rendered ideas/_idea.haml (12.6ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 6)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 10)
+Rendered ideas/_idea.haml (5.1ms)
+Rendered ideas/_idea.haml (12.1ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 7)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 12)
+Rendered ideas/_idea.haml (5.2ms)
+Rendered ideas/_idea.haml (11.9ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 8)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 1)
+Rendered ideas/_idea.haml (5.3ms)
+Rendered ideas/_idea.haml (11.8ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 9)[0m
+Rendered ideas/_idea.haml (5.0ms)
+  [1m[35mIdea Load (0.2ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (type IS NULL) AND (parent_id IS NULL)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 13)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 15)
+Rendered ideas/_idea.haml (5.7ms)
+Rendered ideas/_idea.haml (85.9ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 14)[0m
+Rendered ideas/_idea.haml (5.3ms)
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 16)
+Rendered ideas/_idea.haml (5.2ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 17)[0m
+Rendered ideas/_idea.haml (5.2ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2177456840_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (7.4ms)
+Rendered ideas/index.haml within layouts/ideas (210.0ms)
+Completed 200 OK in 233ms (Views: 208.5ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/ideas/14/edit" for 127.0.0.1 at Thu Feb 03 15:31:23 -0500 2011
+  Processing by IdeasController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`id` = 14) LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2175830200_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (12.7ms)
+Rendered ideas/edit.html.erb within layouts/ideas (16.7ms)
+Completed 200 OK in 29ms (Views: 21.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/ideas/14" for 127.0.0.1 at Thu Feb 03 15:31:28 -0500 2011
+  Processing by IdeasController#update as HTML
+  Parameters: {"commit"=>"Save", "idea"=>{"name"=>"Service Provider Analytics", "color"=>"green", "content"=>""}, "authenticity_token"=>"iIRhFDSZhSbnk3YZkbxAJ70bSZgQPffnm4ubo9sRdj8=", "utf8"=>"✓", "id"=>"14"}
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`id` = 14) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE `ideas` SET `color` = 'green', `updated_at` = '2011-02-03 20:31:28' WHERE (`ideas`.`id` = 14)[0m
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/ideas
+Completed 302 Found in 17ms
+
+
+Started GET "/ideas" for 127.0.0.1 at Thu Feb 03 15:31:28 -0500 2011
+  Processing by IdeasController#index as HTML
+  [1m[36mContainer Load (0.9ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (`ideas`.`name` = 'Trash') LIMIT 1[0m
+  [1m[35mContainer Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (`ideas`.`type` = 'Container') AND (name like 'Slot%')
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 4)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 2)
+Rendered ideas/_idea.haml (9.6ms)
+Rendered ideas/_idea.haml (20.6ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 5)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 11)
+Rendered ideas/_idea.haml (5.4ms)
+Rendered ideas/_idea.haml (12.8ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 6)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 10)
+Rendered ideas/_idea.haml (5.1ms)
+Rendered ideas/_idea.haml (12.0ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 7)[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 12)
+Rendered ideas/_idea.haml (5.1ms)
+Rendered ideas/_idea.haml (11.8ms)
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 8)[0m
+  [1m[35mIdea Load (0.5ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 1)
+Rendered ideas/_idea.haml (6.3ms)
+Rendered ideas/_idea.haml (13.0ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 9)[0m
+Rendered ideas/_idea.haml (6.1ms)
+  [1m[35mIdea Load (0.5ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (type IS NULL) AND (parent_id IS NULL)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 13)[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 15)
+Rendered ideas/_idea.haml (5.6ms)
+Rendered ideas/_idea.haml (85.1ms)
+  [1m[36mIdea Load (0.5ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 14)[0m
+Rendered ideas/_idea.haml (6.4ms)
+  [1m[35mIdea Load (0.4ms)[0m  SELECT `ideas`.* FROM `ideas` WHERE (parent_id = 16)
+Rendered ideas/_idea.haml (5.4ms)
+  [1m[36mIdea Load (0.4ms)[0m  [1mSELECT `ideas`.* FROM `ideas` WHERE (parent_id = 17)[0m
+Rendered ideas/_idea.haml (5.3ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_ideas__new_haml__666957758_2177198880_67230 at /Users/kellyfarrell/Sites/brainstormer/app/views/ideas/_new.haml:1)
+Rendered ideas/_new.haml (7.4ms)
+Rendered ideas/index.haml within layouts/ideas (213.5ms)
+Completed 200 OK in 236ms (Views: 212.8ms | ActiveRecord: 7.7ms)

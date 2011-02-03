@@ -11,6 +11,10 @@
   
   $(function() {
   	$( ".idea" ).draggable({ revert: "invalid" });
+  	$(".idea").dblclick(function() {
+  	  id = $(this).attr('data-id');
+  	  window.location.replace('/ideas/'+id+'/edit');
+  	});
   	$(".idea, .ideas, .slot").droppable({
       hoverClass: "ui-state-active",
       greedy: true,
@@ -21,13 +25,6 @@
       }
     });
   	$('.edit-links').hide();
-  	$(".idea").hover(function() {
-  	  //$(this).children('.edit-links').show();
-  	},
-  	  function() {
-  	    //$(this).children('.edit-links').hide();
-  	  }
-  	);
   });
 %h1 Brainstormer
 %h2 In Progress

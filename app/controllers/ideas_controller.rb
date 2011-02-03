@@ -63,7 +63,7 @@ class IdeasController < ApplicationController
 
     respond_to do |format|
       if @idea.update_attributes(params[:idea])
-        format.html { redirect_to(@idea, :notice => 'Idea was successfully updated.') }
+        format.html { redirect_to(ideas_url, :notice => 'Idea was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
