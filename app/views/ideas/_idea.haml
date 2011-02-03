@@ -1,5 +1,5 @@
-%div{:class => "idea #{h idea.color}", "data-id" => idea.id}
-  %h3= h idea.content
+%div{:class => "#{local_assigns.has_key?(:parent_class) ? parent_class : 'idea' } #{h idea.color}", "data-id" => idea.id}
+  %h3= h idea.name
   %ul.edit-links
     %li= link_to 'Show', idea
     %li= link_to 'Edit', edit_idea_path(idea)

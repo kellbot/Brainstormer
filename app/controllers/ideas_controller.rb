@@ -2,7 +2,10 @@ class IdeasController < ApplicationController
   # GET /ideas
   # GET /ideas.xml
   def index
-    @ideas = Idea.orphan
+    @ideas = Idea.simple.orphan
+    @idea = Idea.new
+    @trash = Container.find_by_name('Trash')
+    @slots = Container.where('name like "Slot%"')
 
     respond_to do |format|
       format.html # index.html.erb

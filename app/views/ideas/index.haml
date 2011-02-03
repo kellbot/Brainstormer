@@ -1,7 +1,8 @@
 :javascript
   function clear_position(elem) {
-    $(elem).css('left','');
-    $(elem).css('top','');
+    elem.css('left','');
+    elem.css('top','');
+    if (elem.parent().hasClass('slot')) $(elem).css('position','');
   }
   
   function save_parent(parent_id, child_id) {
@@ -10,7 +11,7 @@
   
   $(function() {
   	$( ".idea" ).draggable({ revert: "invalid" });
-  	$(".idea, .ideas").droppable({
+  	$(".idea, .ideas, .slot").droppable({
       hoverClass: "ui-state-active",
       greedy: true,
       drop: function(event, ui) {
@@ -21,15 +22,22 @@
     });
   	$('.edit-links').hide();
   	$(".idea").hover(function() {
-  	  $(this).children('.edit-links').show();
+  	  //$(this).children('.edit-links').show();
   	},
   	  function() {
-  	    $(this).children('.edit-links').hide();
+  	    //$(this).children('.edit-links').hide();
   	  }
   	);
   });
-%h1 Listing ideas
-= link_to 'New idea', new_idea_path
+%h1 Brainstormer
+%h2 In Progress
+.slots
+  - @slots.each do |idea|
+    = render :partial => 'idea', :locals => { :idea => idea, :parent_class => 'slot' }
 .ideas
+  %h2 All Ideas
   - @ideas.each do |idea|
     = render :partial => 'idea', :locals => { :idea => idea}
+  .clearfix
+.new-idea
+  = render :partial => 'new'

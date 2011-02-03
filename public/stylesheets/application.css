@@ -1,23 +1,105 @@
-* { margin: 0; padding: 0; }
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, helvetica, sans-serif; }
 
-body { margin: 10px; }
+body {
+  margin: 10px; }
+
+h1 {
+  margin: 25px 0; }
+
+h2 {
+  font-size: 30px;
+  font-weight: normal;
+  margin: 20px 0; }
+
+fieldset {
+  padding: 20px; }
+  fieldset legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    text-transform: capitalize;
+    border: 1px solid #000; }
+  fieldset label {
+    display: inline-block;
+    width: 100px; }
+  fieldset p {
+    margin-bottom: 10px; }
+
+/* hacks */
+.clearfix {
+  clear: both; }
 
 /* application.scss */
-.ideas { clear: both; overflow: auto; }
+#outer {
+  width: 800px;
+  margin: 0 auto; }
 
-.idea { min-height: 50px; min-width: 100px; margin: 2px; padding: 2px; float: left; }
-.idea .edit-links { float: right; list-style-type: none; }
-.idea .edit-links li { display: inline; padding-left: 2px; }
+.ideas {
+  clear: both; }
+
+.slot, .idea {
+  border-radius: 5px;
+  -moz-border-radius: 5px; }
+
+.slots {
+  margin-top: 30px; }
+  .slots .slot {
+    position: relative;
+    margin: 10px 0;
+    height: 28px;
+    background-color: #d7d7d7;
+    border: 1px solid #8d8d8d; }
+    .slots .slot .idea {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      margin: -1px 0;
+      padding: 1px 5px;
+      min-height: 0;
+      height: 26px;
+      width: 90%; }
+
+.idea {
+  margin: 5px;
+  padding: 5px;
+  float: left; }
+  .idea .innermost {
+    padding: 0; }
+  .idea .edit-links {
+    float: right;
+    list-style-type: none; }
+    .idea .edit-links li {
+      display: inline;
+      padding-left: 2px; }
+
+.new-idea {
+  clear: both;
+  margin-top: 30px; }
+  .new-idea textarea {
+    height: 50px; }
 
 /* colors */
-.green { background: #82DE7A; border: 1px solid #508F4A; }
+.green {
+  background: #82DE7A;
+  border: 1px solid #508F4A; }
 
-.yellow { background: #FCFF96; border: 1px solid #8D8F4A; }
+.yellow {
+  background: #FCFF96;
+  border: 1px solid #8D8F4A; }
 
-.blue { background: #8EE3FA; border: 1px solid #417280; }
+.blue {
+  background: #8EE3FA;
+  border: 1px solid #417280; }
 
-.red { background: #F09E9E; border: 1px solid #5E3535; }
+.red {
+  background: #F09E9E;
+  border: 1px solid #5E3535; }
 
-.purple { background: #FCB3FB; border: 1px solid #783177; }
+.purple {
+  background: #FCB3FB;
+  border: 1px solid #783177; }
 
 /* sizes */
